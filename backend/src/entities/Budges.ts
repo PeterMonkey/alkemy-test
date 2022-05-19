@@ -1,4 +1,4 @@
-import { Entity, Column, CreateDateColumn, PrimaryColumn } from "typeorm";
+import { Entity, Column, CreateDateColumn, PrimaryGeneratedColumn } from "typeorm";
 
 enum operation {
     ingress,
@@ -8,7 +8,7 @@ enum operation {
 @Entity('budge')
 export class Budge {
 
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     id: string
 
     @Column()

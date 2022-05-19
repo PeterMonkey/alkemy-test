@@ -1,8 +1,8 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn, BaseEntity } from "typeorm";
 import { Budge } from "./Budges";
 
 @Entity('user')
-export class User {
+export class User extends BaseEntity{
 
     @PrimaryGeneratedColumn()
     id: string
@@ -11,7 +11,7 @@ export class User {
     email: string
 
     @Column()
-    password: string
+    password: string 
 
     @OneToOne(() => Budge)
     @JoinColumn()

@@ -10,5 +10,6 @@ export const AppDataSource = new DataSource({
     password: "backend",
     database: "postgres",
     synchronize: true,
+    logging: true,
     entities: [Budge, User],
 })
