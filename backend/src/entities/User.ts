@@ -15,5 +15,5 @@ export class User extends BaseEntity{
 
     @OneToOne(() => Budge)
     @JoinColumn()
-    budge: Budge
+    budge: Budge 
 }

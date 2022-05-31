@@ -14,3 +14,10 @@ export const createUser = async (req:Request, res:Response) => {
     console.log(user)
     res.json(user)
 }
+
+export const getUsers = async (req:Request, res:Response) => {
+
+    const users = await User.find()
+
+    return res.json(users)
+}
