@@ -24,5 +24,15 @@ export const getUsers = async (req:Request, res:Response):Promise<Response> => {
 }
 
 export const createBudge = async (req:Request, res:Response):Promise<void> => {
+    const {amount, concept, type} = req.body;
 
+    const budge = new Budge()
+    budge.amount = amount
+    budge.concept = concept
+    budge.type = type
+
+    await budge.save()
+
+    console.log(budge)
+    res.json(budge)
 }
